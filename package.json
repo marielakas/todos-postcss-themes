@@ -28,6 +28,8 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.6.2",
     "extract-text-webpack-plugin": "^1.0.1",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
     "precss": "^1.4.0",
     "react-hot-loader": "^1.3.0",
