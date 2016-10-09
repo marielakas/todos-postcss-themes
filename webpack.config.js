@@ -35,7 +35,7 @@ module.exports = {
   },
   postcss: [
     require('postcss-import')({
-      path: path.join(__dirname, 'src', 'themes', 'light'),
+      path: path.join(__dirname, 'src', 'themes', process.env.THEME || 'light'),
       addDependencyTo: webpack
     }),
     require("postcss-cssnext")
