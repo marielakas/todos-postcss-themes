@@ -15,6 +15,12 @@
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2
   },
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+  },
   "plugins": [
     "react"
   ]

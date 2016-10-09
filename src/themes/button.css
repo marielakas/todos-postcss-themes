@@ -1,5 +1,9 @@
 @import 'button-vars.css';
 
+.addTodo {
+  background-color: var(--backgroundColor);
+}
+
 .standardButton {
   width: 100px;
   height: 100px;
