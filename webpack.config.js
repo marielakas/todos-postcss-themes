@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var precss = require('precss');
 var autoprefixer =  require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var THEME = process.env.THEME || 'light';
 
 module.exports = {
   devtool: 'eval',
@@ -12,7 +13,7 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist', THEME),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
@@ -35,7 +36,7 @@ module.exports = {
   },
   postcss: [
     require('postcss-import')({
-      path: path.join(__dirname, 'src', 'themes', process.env.THEME || 'light'),
+      path: path.join(__dirname, 'src', 'themes', THEME),
       addDependencyTo: webpack
     }),
     require("postcss-cssnext")
