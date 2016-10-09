@@ -4,6 +4,8 @@ var precss = require('precss');
 var autoprefixer =  require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var THEME = process.env.THEME || 'light';
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var isProd = !!process.env.PROD;
 
 module.exports = {
   devtool: 'eval',
@@ -15,10 +17,17 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist', THEME),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: isProd ? '/static/' : '/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.ejs',
+      title: THEME,
+      inject: false,
+      requirePath: isProd ? `/dist/${THEME}/` : '/'
+    }),
     new ExtractTextPlugin('styles.css', {
       allChunks: true
     })

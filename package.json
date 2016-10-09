@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dark": "set THEME=dark&& webpack --config webpack.config.js",
-    "build:light": "set THEME=light&& webpack --config webpack.config.js",
+    "dev:dark": "set THEME=dark&& npm start",
+    "dev:light": "set THEME=light&& npm start",
+    "dev": "npm run dev:light",
+    "build:dark": "set THEME=dark&& set PROD=true&& webpack --config webpack.config.js",
+    "build:light": "set THEME=light&& set PROD=true&& webpack --config webpack.config.js",
     "build": "npm run build:dark&& npm run build:light"
   },
   "repository": {
@@ -31,6 +34,7 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.6.2",
     "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.22.0",
     "postcss-cssnext": "^2.8.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
