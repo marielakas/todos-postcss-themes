@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
-
+import { addTodo } from '../actions/todosActions';
 import buttonStyles from '../themes/button.css';
 
 const AddTodo = ({ dispatch }) => {

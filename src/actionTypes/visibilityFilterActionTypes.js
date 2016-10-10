@@ -1,0 +1,3 @@
+export default {
+  SET_VISIBILITY_FILTER: Symbol('SET_VISIBILITY_FILTER')
+}

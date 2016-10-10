@@ -1,7 +1,9 @@
+import todosActionTypes from '../actionTypes/todosActionTypes';
 let nextTodoId = 0;
+
 export const addTodo = (text) => {
   return {
-    type: 'ADD_TODO',
+    type: todosActionTypes.ADD_TODO,
     id: (nextTodoId++).toString(),
     text,
   };
@@ -16,7 +18,7 @@ export const setVisibilityFilter = (filter) => {
 
 export const toggleTodo = (id) => {
   return {
-    type: 'TOGGLE_TODO',
+    type: todosActionTypes.TOGGLE_TODO,
     id,
   };
 };

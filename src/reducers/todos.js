@@ -1,12 +1,14 @@
+import todosActionTypes from '../actionTypes/todosActionTypes';
+
 const todo = (state, action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case todosActionTypes.ADD_TODO:
       return {
         id: action.id,
         text: action.text,
         completed: false,
       };
-    case 'TOGGLE_TODO':
+    case todosActionTypes.TOGGLE_TODO:
       if (state.id !== action.id) {
         return state;
       }
@@ -21,12 +23,12 @@ const todo = (state, action) => {
 
 const todos = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case todosActionTypes.ADD_TODO:
       return [
         ...state,
         todo(undefined, action),
       ];
-    case 'TOGGLE_TODO':
+    case todosActionTypes.TOGGLE_TODO:
       return state.map(t =>
         todo(t, action)
       );
