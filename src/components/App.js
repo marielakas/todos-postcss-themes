@@ -4,10 +4,10 @@ import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 import form from '../themes/form.css';
 
-const App = ({ params }) => (
+const App = () => (
   <div className={form.formContainer}>
     <AddTodo />
-    <VisibleTodoList filter={params.filter || 'all'} />
+    <VisibleTodoList />
     <Footer />
   </div>
 );

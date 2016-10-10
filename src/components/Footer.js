@@ -1,16 +1,15 @@
 import React from 'react';
 import constants from '../helpers/constants';
 import FilterLink from '../containers/FilterLink';
-import footerStyles from '../themes/footer.css';
 
 const Footer = () => (
-  <div className={footerStyles.footer}>
+  <div>
     Show:{" "}
-    <FilterLink filter='all'>All</FilterLink>
+    <FilterLink filter={constants.SHOW_ALL}>All</FilterLink>
     {", "}
-    <FilterLink filter='active'>Active</FilterLink>
+    <FilterLink filter={constants.SHOW_ACTIVE}>Active</FilterLink>
     {", "}
-    <FilterLink filter='completed'>Completed</FilterLink>
+    <FilterLink filter={constants.SHOW_COMPLETED}>Completed</FilterLink>
   </div>
 );
 

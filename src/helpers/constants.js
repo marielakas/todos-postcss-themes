@@ -1,5 +1,5 @@
 export default {
-  all: 'all',
-  completed: 'completed',
-  active: 'active',
+  SHOW_ALL: 'SHOW_ALL',
+  SHOW_COMPLETED: 'SHOW_COMPLETED',
+  SHOW_ACTIVE: 'SHOW_ACTIVE'
 };

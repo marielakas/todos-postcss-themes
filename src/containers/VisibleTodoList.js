@@ -5,20 +5,20 @@ import constants from '../helpers/constants';
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {
-    case constants.all:
+    case constants.SHOW_ALL:
       return todos;
-    case constants.completed:
+    case constants.SHOW_COMPLETED:
       return todos.filter(t => t.completed);
-    case constants.active:
+    case constants.SHOW_ACTIVE:
       return todos.filter(t => !t.completed);
     default:
       throw new Error(`Unknown filter: ${filter}.`);
   }
 };
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
-    todos: getVisibleTodos(state.todos, ownProps.filter),
+    todos: getVisibleTodos(state.todos, state.visibilityFilter),
   };
 };
 
