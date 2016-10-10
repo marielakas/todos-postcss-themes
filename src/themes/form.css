@@ -14,8 +14,11 @@ body {
 }
 
 .formContainer {
+  display: flex;
+  flex-direction: column;
   width: 500px;
-  height: 800px;
+  height: 600px;
+  padding: 20px;
   background-color: var(--formColor);
   border: 1px solid var(--borderColor);
   border-radius: 3px;
