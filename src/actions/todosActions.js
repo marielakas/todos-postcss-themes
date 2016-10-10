@@ -1,10 +1,9 @@
 import todosActionTypes from '../actionTypes/todosActionTypes';
-
-let nextTodoId = 0;
+import { generateId } from '../helpers/utils';
 
 export const addTodo = (text) => ({
   type: todosActionTypes.ADD_TODO,
-  id: (nextTodoId++).toString(),
+  id: generateId(),
   text
 });
 
