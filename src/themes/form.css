@@ -14,6 +14,8 @@ body {
 }
 
 .formContainer {
+  display: flex;
+  flex-direction: column;
   width: 500px;
   height: 800px;
   background-color: var(--formColor);
