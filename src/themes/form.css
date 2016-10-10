@@ -1,0 +1,22 @@
+@import 'form-vars.css';
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--backgroundColor);
+  font-family: 'Roboto';
+}
+
+.formContainer {
+  width: 500px;
+  height: 800px;
+  background-color: var(--formColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+}

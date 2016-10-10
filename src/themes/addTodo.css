@@ -1,0 +1,30 @@
+@import 'form-vars.css';
+
+.addTodoContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100px;
+  padding: 20px 20px 0 0;
+}
+
+.input {
+  height: 30px;
+  width: 350px;
+  text-align: center;
+  background-color: var(--inputColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 2px;
+}
+
+.button {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  color: var(--inputColor);
+  text-align: center;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  background-color: var(--buttonColor);
+}
