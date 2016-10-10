@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/marielakas/todos#readme",
   "devDependencies": {
-    "autoprefixer": "^6.5.0",
     "babel-cli": "^6.7.7",
     "babel-core": "^6.3.15",
     "babel-eslint": "^4.1.3",

@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var precss = require('precss');
-var autoprefixer =  require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var THEME = process.env.THEME || 'light';
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -44,8 +43,8 @@ module.exports = {
   },
   postcss: [
     require('postcss-import')({
-      path: path.join(__dirname, 'src', 'themes', THEME),
-      addDependencyTo: webpack
+      addDependencyTo: webpack,
+      path: path.join(__dirname, 'src', 'themes', THEME)
     }),
     require("postcss-cssnext")
   ]
