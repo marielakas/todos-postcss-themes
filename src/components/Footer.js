@@ -1,22 +1,16 @@
 import React from 'react';
-import FilterLink from './FilterLink';
+import constants from '../helpers/constants';
+import FilterLink from '../containers/FilterLink';
 
 const Footer = () => (
-  <p>
-    Show:
-    {" "}
-    <FilterLink filter="SHOW_ALL">
-      All
-    </FilterLink>
+  <div>
+    Show:{" "}
+    <FilterLink filter={constants.SHOW_ALL}>All</FilterLink>
     {", "}
-    <FilterLink filter="SHOW_ACTIVE">
-      Active
-    </FilterLink>
+    <FilterLink filter={constants.SHOW_ACTIVE}>Active</FilterLink>
     {", "}
-    <FilterLink filter="SHOW_COMPLETED">
-      Completed
-    </FilterLink>
-  </p>
+    <FilterLink filter={constants.SHOW_COMPLETED}>Completed</FilterLink>
+  </div>
 );
 
 export default Footer;
