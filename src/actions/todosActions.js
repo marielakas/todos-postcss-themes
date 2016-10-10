@@ -1,4 +1,5 @@
 import todosActionTypes from '../actionTypes/todosActionTypes';
+
 let nextTodoId = 0;
 
 export const addTodo = (text) => ({
