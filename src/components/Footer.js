@@ -5,11 +5,11 @@ import FilterLink from '../containers/FilterLink';
 const Footer = () => (
   <div>
     Show:{" "}
-    <FilterLink filter={constants.SHOW_ALL}>All</FilterLink>
+    <FilterLink filter='all'>All</FilterLink>
     {", "}
-    <FilterLink filter={constants.SHOW_ACTIVE}>Active</FilterLink>
+    <FilterLink filter='active'>Active</FilterLink>
     {", "}
-    <FilterLink filter={constants.SHOW_COMPLETED}>Completed</FilterLink>
+    <FilterLink filter='completed'>Completed</FilterLink>
   </div>
 );
 
