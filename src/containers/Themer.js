@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { RadioGroup, Radio } from 'react-radio-group';
+import constants from '../helpers/constants';
 import themerStyles from '../themes/themer.css';
 
 export default class Themer extends Component {
@@ -11,12 +12,13 @@ export default class Themer extends Component {
       this.onChange = this.onChange.bind(this);
   }
 
-  onChange(value, event) {
+  onChange(value) {
+    let stylesheet = document.getElementById("main-stylesheet");
+    let newPath = `/dist/${value}/styles.css`;
+
     this.setState({
       selectedValue: value
     });
-    var stylesheet = document.getElementById("main-stylesheet");
-    var newPath = `/dist/${value}/styles.css`;
     stylesheet.href = newPath;
   }
 
@@ -29,10 +31,10 @@ export default class Themer extends Component {
           onChange={this.onChange}
         >
           <label>
-            <Radio value="cappuccino" />Cappuccino
+            <Radio value={constants.cappuccino} />Cappuccino
           </label>
           <label>
-            <Radio value="lavender" />Lavender
+            <Radio value={constants.lavender} />Lavender
           </label>
         </RadioGroup>
       </div>
