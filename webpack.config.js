@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var precss = require('precss');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var THEME = process.env.THEME || 'light';
+var THEME = process.env.THEME || 'lavender';
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var isProd = !!process.env.PROD;
 
@@ -24,6 +24,7 @@ module.exports = {
       template: 'index.ejs',
       title: THEME,
       inject: false,
+      theme: THEME,
       requirePath: isProd ? `/dist/${THEME}/` : '/'
     }),
     new ExtractTextPlugin('styles.css', {

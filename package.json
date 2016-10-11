@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:dark": "set THEME=dark&& npm start",
-    "dev:light": "set THEME=light&& npm start",
+    "dev:dark": "set THEME=cappuccino&& npm start",
+    "dev:light": "set THEME=lavender&& npm start",
     "dev": "npm run dev:light",
-    "build:dark": "set THEME=dark&& set PROD=true&& webpack --config webpack.config.js",
-    "build:light": "set THEME=light&& set PROD=true&& webpack --config webpack.config.js",
-    "build": "npm run build:dark&& npm run build:light"
+    "build:dark": "set THEME=cappuccino&& set PROD=true&& webpack --config webpack.config.js",
+    "build:light": "set THEME=lavender&& set PROD=true&& webpack --config webpack.config.js",
+    "build": "npm run build:dark&& npm run build:light",
+    "build:dark:osx": "THEME=cappuccino PROD=true webpack --config webpack.config.js",
+    "build:light:osx": "THEME=lavender PROD=true webpack --config webpack.config.js",
+    "build:osx": "npm run build:dark:osx && npm run build:light:osx"
   },
   "repository": {
     "type": "git",
@@ -55,6 +58,7 @@
     "babel-polyfill": "^6.3.14",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-radio-group": "^3.0.1",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2"
   }
