@@ -87,6 +87,6 @@ module.exports = {
           // Do not remove this. It is used to handle css loaders' json requires internally.
           test: /\.json$/,
           loader: "json-loader"
-        }]
+      }]
     }
 }
